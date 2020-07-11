@@ -1,0 +1,165 @@
+body {
+    background-color: #292929;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logoItem {
+    float: right;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: inherit;
+    border-left: #292929 solid 3px;
+    letter-spacing: 1px;
+}
+
+nav {
+    width: 95%;
+    background: grey;
+}
+
+.logoItem:hover {
+    background-color: lightskyblue;
+    color: black
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: inherit;
+}
+
+#pData {
+    font-size: 40px;
+    padding: 10px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+main {
+    padding-top: 10px;
+    width: 950px;
+    height: 450px;
+    padding: 5px;
+}
+
+.tile1 {
+    width: 220px;
+    height: 140px;
+    margin: 5px;
+    background-color: lightseagreen;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tile2 {
+    width: 220px;
+    height: 140px;
+    margin: 5px;
+    background-color: chartreuse;
+    float: left;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+#tileof4 {
+    background-color: initial;
+}
+
+.tileinside4 {
+    float: left;
+    width: 105px;
+    height: 65px;
+    background-color: black;
+    text-decoration: none;
+}
+
+#litile {
+    background-color: #2867B2;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#gittile {
+    margin-left: 5px;
+    width: 103px;
+    height: 63px;
+    margin-bottom: 5px;
+    background-color: black;
+    border: grey 1px solid
+}
+
+#mailtile {
+    background-color: #DB4437;
+    margin-right: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#fbtile {
+    background-color: #4267B2;
+    
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: auto;
+}
+
+#content {
+    text-align: center;
+    width: 460px;
+    height: 290px;
+    background-color: silver;
+    margin: 5px;
+}
+
+.lowtile {
+    width: 450px;
+    height: 140px;
+    margin: 5px;
+    background-color: tomato;
+    float: left;
+}
+
+#clearmotto {
+    width: 400px;
+    background-color: initial;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.maincolumn {
+    float: left;
+}
+
+.langicon {
+    padding-top: 20px;
+    margin: -10px;
+    width: 110px;
+    float: left;
+}
+
+footer {
+    text-align: center;
+}
