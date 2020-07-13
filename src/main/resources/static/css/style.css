@@ -29,7 +29,7 @@ nav {
 
 .logoItem:hover {
     background-color: lightskyblue;
-    color: black
+
 }
 
 a {
@@ -50,7 +50,7 @@ a:visited {
 }
 
 main {
-    padding-top: 10px;
+
     width: 950px;
     height: 450px;
     padding: 5px;
@@ -82,6 +82,7 @@ main {
 
 #tileof4 {
     background-color: initial;
+    cursor: auto;
 }
 
 .tileinside4 {
