@@ -1,4 +1,4 @@
-package pl.bogus.mysite;
+package pl.bogus.mysite.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -13,27 +13,28 @@ import java.util.NoSuchElementException;
 
 @org.springframework.stereotype.Controller
 @RequestMapping
-public class Controller {
+public class IntroductionController {
 
     ContentRepository contentRepository;
-@Autowired
-    public Controller(ContentRepository contentRepository) {
+
+    @Autowired
+    public IntroductionController(ContentRepository contentRepository) {
         this.contentRepository = contentRepository;
     }
 
-   /* @GetMapping("/hello")
-    public String hello(){
-        return "index";
-    }*/
+    /* @GetMapping("/hello")
+     public String hello(){
+         return "index";
+     }*/
     @GetMapping("/hello")
-    public String test( @RequestParam(value = "param1", required = false) String param, Model model){
+    public String test(@RequestParam(value = "param1", required = false) String param, Model model) {
         Information information = contentRepository
                 .findAll()
                 .stream()
-                .filter(a->a.getTitle().equals(param))
-                .max(Comparator.comparingLong(i->i.getCreated().getTime()))
+                .filter(a -> a.getTitle().equals(param))
+                .max(Comparator.comparingLong(i -> i.getCreated().getTime()))
                 .orElseThrow(NoSuchElementException::new);
-    model.addAttribute("test", information.getContent());
+        model.addAttribute("test", information.getContent());
 
         return "index";
     }
