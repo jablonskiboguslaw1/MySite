@@ -3,9 +3,7 @@ package pl.bogus.mysite.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
@@ -22,6 +20,8 @@ public class Information {
     @GeneratedValue
     private Long id;
     private String title;
+
+    @Lob
     private String content;
     private Date created;
 

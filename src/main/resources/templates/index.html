@@ -2,22 +2,24 @@
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>My Portfolio Site</title>
+    <title>My Simple Site</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/fontello.css}" />
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <script> function myFunc(){alert("I don't have time for Facebook! This is a fake tile");}
+    </script>
 </head>
 
 <body>
     <div id="container">
         <header>
             <nav class="logo">
-                <a th:href ="@{/hello(param1='test4')}"><div class="logoItem">Contact</div></a>
-                <a th:href ="@{/hello(param1='test2')}"><div class="logoItem">Tools & Progress</div></a>
-                <a th:href ="@{/hello(param1='test3')}"><div class="logoItem">From Scratch</div></a>
-                <a th:href ="@{/hello(param1='test1')}"><div class="logoItem">About</div></a>
-                <a th:href ="@{/}"><div class="logoItem">Home</div></a>
+                <a th:href ="@{/hello(param1='contact')}"><div class="logoItem">Contact</div></a>
+                <a th:href ="@{/hello(param1='tools')}"><div class="logoItem">Tools</div></a>
+                <a th:href ="@{/hello(param1='fromScratch')}"><div class="logoItem">What's this</div></a>
+                <a th:href ="@{/hello(param1='about')}"><div class="logoItem">About</div></a>
+                <a th:href ="@{/(param1='home')}"><div class="logoItem">Home</div></a>
 
             </nav>
             <div style="clear: both;"></div>
@@ -28,10 +30,10 @@
 
         <main>
             <div id="column1" class="maincolumn">
-                <a th:href ="@{/hello(param1='test1')}"> <div class="tile2"><i class="icon-user-circle"></i><br /> About (me)</div></a>
-                <a th:href ="@{/hello(param1='test2')}"> <div class="tile1"><i class="icon-tools"></i><br /> Tools & Progress</div></a>
+                <a th:href ="@{/hello(param1='about')}"> <div class="tile2"><i class="icon-user-circle"></i><br /> About (me)</div></a>
+                <a th:href ="@{/hello(param1='tools')}"> <div class="tile1"><i class="icon-tools"></i><br /> Tools </div></a>
                 <div style="clear: both;"></div>
-                <a th:href ="@{/hello(param1='test3')}"><div id="tileno3" class="tile1"><i class="icon-help-circled"></i><br />From Scratch</div></a>
+                <a th:href ="@{/hello(param1='fromScratch')}"><div id="tileno3" class="tile1"><i class="icon-help-circled"></i><br />What's this</div></a>
                 <div id="tileof4" class="tile2">
 
                     <a href="https://www.linkedin.com/in/boguslaw-jablonski/">
@@ -42,7 +44,7 @@
                     <a href="mailto:jablonski.boguslaw@gmail.com">
                         <div  id="mailtile" class="tileinside4"><i class="icon-mail"></i></div>
                     </a>
-                    <a href=""  ></a> <div id="fbtile" class="tileinside4"><i class="icon-facebook"></i></div></a>
+                    <a href=""  onclick="myFunc()"> <div id="fbtile" class="tileinside4"><i class="icon-facebook"></i></div></a>
                 </div>
 
                 <div style="clear: both;"></div>
@@ -57,7 +59,7 @@
             </div>
             <div id="column2" class="maincolumn">
                 <div id="content">
-                   <span th:text="${test}"><span>
+                   <span th:text="${content}"><span>
                 </div>
                 <div id="clearmotto" class="lowtile">
                     <i>“Whatever the mind can conceive and believe, it can achieve.”</i>
@@ -74,7 +76,7 @@
         <div style="clear: both;"></div>
 
 
-        <footer>&copy; All rights reserved.</footer>
+        <footer></footer>
     </div>
 
 </body>
